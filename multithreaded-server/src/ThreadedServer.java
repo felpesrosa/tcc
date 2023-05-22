@@ -57,6 +57,8 @@ public class ThreadedServer {
             singleThreadServer.stop(0);
             virtualThreadsServer.stop(0);
             System.out.println("------------- closing the server -------------");
+
+            System.exit(0);
         }
     }
 

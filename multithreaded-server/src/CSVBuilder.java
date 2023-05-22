@@ -6,9 +6,9 @@ import java.io.PrintWriter;
 public class CSVBuilder {
     static PrintWriter logPrinter;
 
-    public CSVBuilder(Long pid) throws IOException {
-        
-        String logFileName = "/home/felipe/Documentos/ptcc/multithreaded-server/src/log/log-PID_" + pid
+    public CSVBuilder(Long pid) throws IOException {        
+                
+        String logFileName = System.getProperty("user.dir") + "/multithreaded-server/src/log/log-PID_" + pid
                 + ".csv";
 
         File logFile = new File(logFileName);

@@ -1,0 +1,5 @@
+Request URI, Com interrupção?, Número a verificar, Primo?, Sequência testada
+/withSingleThread/100525215, false, 100525215, false, { 2 3 }
+/withSingleThread/100527, false, 100527, false, { 2 3 }
+/withSingleThread/10, false, 10, false, { 2 }
+/withSingleThread/19415, false, 19415, false, { 2 3 4 5 }
