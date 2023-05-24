@@ -15,6 +15,12 @@ Repositório para controlar as versões do PTCC
     conferir instalação
         java --version
 
+- instalar o Vegeta, ferramenta para disparo de requisições:
+    curl -LO https://github.com/tsenart/vegeta/releases/download/v12.8.3/vegeta-12.8.3-linux-amd64.tar.gz
+    tar -zxvf vegeta-12.8.3-linux-amd64.tar.gz
+    sudo mv ./vegeta /usr/bin/vegeta
+    vegeta --version
+
 - rodar o programa ThreadedServer.Main
     na versão 21 do Java não precisa mais do --enable-preview no propath de execução
 

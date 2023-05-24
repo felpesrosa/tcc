@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.util.Date;
 import java.util.concurrent.ThreadFactory;
 
 import com.sun.net.httpserver.HttpExchange;
@@ -10,6 +11,7 @@ import com.sun.net.httpserver.HttpServer;
 public class ThreadedServer {
     static CSVBuilder csvBuilder;
 
+    static HttpServer configServer;
     static HttpServer platformThreadsServer;
     static HttpServer singleThreadServer;
     static HttpServer cachedThreadsServer;
@@ -17,6 +19,11 @@ public class ThreadedServer {
 
     public static void main(String[] args) throws Exception {
         csvBuilder = new CSVBuilder(ProcessHandle.current().pid());
+
+        configServer = HttpServer.create(new InetSocketAddress(7999), 0);
+        configServer.createContext("/config", new ConfigServerHandler());
+        configServer.setExecutor(java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor());
+        configServer.start();
 
         platformThreadsServer = HttpServer.create(new InetSocketAddress(8000), 0);
         platformThreadsServer.createContext("/withPlatformThreads", new PlatformThreadsHandler());
@@ -37,53 +44,55 @@ public class ThreadedServer {
         virtualThreadsServer.createContext("/withVirtualThreads", new VirtualThreadsHandler());
         virtualThreadsServer.setExecutor(java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor());
         virtualThreadsServer.start();
-
-        virtualThreadsServer.createContext("/close", new CloseServerHandler());
     }
 
-    static class CloseServerHandler implements HttpHandler {
+    static class ConfigServerHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-            String response = "Closing the server!";
-            t.sendResponseHeaders(200, response.length());
-            OutputStream os = t.getResponseBody();
-            os.write(response.getBytes());
-            os.close();
+            String requestQuery = t.getRequestURI().getQuery();
 
-            csvBuilder.close();
+            if (requestQuery.contains("closeServer")) {
+                String response = "Closing the server!";
+                t.sendResponseHeaders(200, response.length());
+                OutputStream os = t.getResponseBody();
+                os.write(response.getBytes());
+                os.close();
 
-            cachedThreadsServer.stop(0);
-            platformThreadsServer.stop(0);
-            singleThreadServer.stop(0);
-            virtualThreadsServer.stop(0);
-            System.out.println("------------- closing the server -------------");
+                csvBuilder.close();
 
-            System.exit(0);
+                cachedThreadsServer.stop(0);
+                platformThreadsServer.stop(0);
+                singleThreadServer.stop(0);
+                virtualThreadsServer.stop(0);
+                configServer.stop(0);
+
+                System.out.println("\n ------------------- servers closed -------------------");
+                System.out.println(" ------ log: " + new Date() + " -------------\n");
+
+                System.exit(0);
+            }            
         }
     }
 
     static class PlatformThreadsHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-            boolean withDelay = false;
             String[] requestURI = t.getRequestURI().toString().split("/");
 
             /* Setar as informações do número a ser verificado com dados da URI */
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
+            try {
+                Thread.currentThread().sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             String response = "The number " + numberToCheck.numberToCheck + " is ";
             String result = numberToCheck.isPrime ? "a prime number." : "not a prime number.";
             response = response + result;
 
-            if (requestURI.length > 3 && requestURI[3].equalsIgnoreCase("withDelay")) {
-                withDelay = true;
-                try { Thread.sleep(500); } 
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            String csvLine = t.getRequestURI().toString() + ", " + withDelay + ", " + numberToCheck.toString();
+            String csvLine = t.getRequestURI().toString() + ", " + numberToCheck.toString();
             csvBuilder.writeCSV(csvLine);
 
             t.sendResponseHeaders(200, response.length());
@@ -96,25 +105,22 @@ public class ThreadedServer {
     static class SingleThreadHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-            boolean withDelay = false;
             String[] requestURI = t.getRequestURI().toString().split("/");
 
             /* Setar as informações do número a ser verificado com dados da URI */
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
+            try {
+                Thread.currentThread().sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             String response = "The number " + numberToCheck.numberToCheck + " is ";
             String result = numberToCheck.isPrime ? "a prime number." : "not a prime number.";
             response = response + result;
 
-            if (requestURI.length > 3 && requestURI[3].equalsIgnoreCase("withDelay")) {
-                withDelay = true;
-                try { Thread.sleep(500); } 
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            String csvLine = t.getRequestURI().toString() + ", " + withDelay + ", " + numberToCheck.toString();
+            String csvLine = t.getRequestURI().toString() + ", " + numberToCheck.toString();
             csvBuilder.writeCSV(csvLine);
 
             t.sendResponseHeaders(200, response.length());
@@ -127,25 +133,22 @@ public class ThreadedServer {
     static class CachedThreadsHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-            boolean withDelay = false;
             String[] requestURI = t.getRequestURI().toString().split("/");
 
             /* Setar as informações do número a ser verificado com dados da URI */
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
+            try {
+                Thread.currentThread().sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             String response = "The number " + numberToCheck.numberToCheck + " is ";
             String result = numberToCheck.isPrime ? "a prime number." : "not a prime number.";
             response = response + result;
 
-            if (requestURI.length > 3 && requestURI[3].equalsIgnoreCase("withDelay")) {
-                withDelay = true;
-                try { Thread.sleep(500); } 
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            String csvLine = t.getRequestURI().toString() + ", " + withDelay + ", " + numberToCheck.toString();
+            String csvLine = t.getRequestURI().toString() + ", " + numberToCheck.toString();
             csvBuilder.writeCSV(csvLine);
 
             t.sendResponseHeaders(200, response.length());
@@ -158,25 +161,22 @@ public class ThreadedServer {
     static class VirtualThreadsHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
-            boolean withDelay = false;
             String[] requestURI = t.getRequestURI().toString().split("/");
 
             /* Setar as informações do número a ser verificado com dados da URI */
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
+            try {
+                Thread.currentThread().sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             String response = "The number " + numberToCheck.numberToCheck + " is ";
             String result = numberToCheck.isPrime ? "a prime number." : "not a prime number.";
             response = response + result;
 
-            if (requestURI.length > 3 && requestURI[3].equalsIgnoreCase("withDelay")) {
-                withDelay = true;
-                try { Thread.sleep(500); } 
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            String csvLine = t.getRequestURI().toString() + ", " + withDelay + ", " + numberToCheck.toString();
+            String csvLine = t.getRequestURI().toString() + ", " + numberToCheck.toString();
             csvBuilder.writeCSV(csvLine);
 
             t.sendResponseHeaders(200, response.length());
