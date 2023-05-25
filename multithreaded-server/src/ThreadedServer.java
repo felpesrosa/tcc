@@ -83,7 +83,7 @@ public class ThreadedServer {
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
             try {
-                Thread.currentThread().sleep(250);
+                Thread.currentThread().sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -111,7 +111,7 @@ public class ThreadedServer {
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
             try {
-                Thread.currentThread().sleep(250);
+                Thread.currentThread().sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -139,7 +139,7 @@ public class ThreadedServer {
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
             try {
-                Thread.currentThread().sleep(250);
+                Thread.currentThread().sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -167,7 +167,7 @@ public class ThreadedServer {
             PrimeNumber numberToCheck = new PrimeNumber(Integer.parseInt(requestURI[2]));
 
             try {
-                Thread.currentThread().sleep(250);
+                Thread.currentThread().sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
