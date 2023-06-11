@@ -19,22 +19,16 @@ sudo systemctl status tomcat
 ### Exemplos de URL do Tomcat
         // criar o arquivo .CSV
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
-
+        
 
         // testar um número primo sem delay
         curl http://localhost:8080/Servlet/primeNumber?numberToCheck=6696983
-
+        
 
         // testar um número primo com delay
         curl http://localhost:8080/Servlet/primeNumber?numberToCheck=6696983&delayedExecution=true
-
+        
 
         // fechar o arquivo .CSV
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
-
-
-
-
-
-
-
+        
