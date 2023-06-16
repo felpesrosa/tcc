@@ -11,6 +11,12 @@
 </web-app>
 
 <!--     
+    compilar nova versao:
+        cd ~/univille/tcc/servlet
+        javac -d web/WEB-INF/classes/ -cp /opt/tomcat/lib/\* src/*.java
+        jar cvf Servlet.war -C web .
+        sudo cp Servlet.war /opt/tomcat/webapps/
+
     uso: 
         // criar o arquivo .CSV
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true

@@ -7,7 +7,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class CSVBuilder {
-    static PrintWriter logPrinter;
+    private static PrintWriter logPrinter;
+    private static File logFile;
+    private static FileWriter fileWriter;
     private static Lock lock = new ReentrantLock();
 
     public CSVBuilder(Long pid) throws IOException {
@@ -17,11 +19,12 @@ public class CSVBuilder {
                 + "_" + new Date().toString().replace(" ","_")
                 + ".csv";
 
-        File logFile = new File(logFileName);
-        FileWriter fileWriter = new FileWriter(logFile);
+        logFile = new File(logFileName);
+        fileWriter = new FileWriter(logFile);
         logPrinter = new PrintWriter(fileWriter);
 
-        logPrinter.println("Request URI, Número a verificar, Primo?, ThreadInfo, Sequência testada, Execução atrasada?"); // colunas do .CSV
+        // colunas do .CSV
+        logPrinter.println("Request URI, Número a verificar, Primo?, ThreadInfo, Execução atrasada?");
     }
 
     static public void writeCSV(String logMessage, boolean delayedExecution) {
