@@ -31,7 +31,7 @@ public class CSVBuilder {
         lock.lock();
             if (delayedExecution) {
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

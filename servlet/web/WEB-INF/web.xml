@@ -28,5 +28,5 @@
         curl http://localhost:8080/Servlet/primeNumber?numberToCheck=6696983&delayedExecution=true
 
         // fechar o arquivo .CSV
-        curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
+        curl http://localhost:8080/Servlet/primeNumber?closeCSVFile=true
  -->
