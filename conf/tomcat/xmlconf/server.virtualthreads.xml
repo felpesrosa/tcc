@@ -66,15 +66,15 @@
          AJP  Connector: /docs/config/ajp.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <!-- 
-         <Connector port="8080" protocol="HTTP/1.1"
+    <!--
+          <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443" /> 
-    -->
+               redirectPort="8443" />
+     -->
     <Connector executor="virtualThreadExecutor" port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                maxConnections="-1"
-               maxThreads="100000"
+               maxThreads="2000"
                redirectPort="8443" />
     <!-- A "Connector" using the shared thread pool-->
     <!--
@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log" suffix=".txt"
-               pattern="%h %l %u %t &quot;%r&quot; %s %b %D %F" />
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
       </Host>
     </Engine>
