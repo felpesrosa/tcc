@@ -1,0 +1,38 @@
+ 1 º loop, VirtualThreads > seg 19 jun 2023 15:59:25 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 15:59:35 -03
+ 1 º loop, VirtualThreads > seg 19 jun 2023 16:03:17 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 16:03:27 -03
+ 2 º loop, VirtualThreads > seg 19 jun 2023 16:04:37 -03
+fim 2 º loop com VirtualThreads > seg 19 jun 2023 16:04:47 -03
+ 1 º loop, VirtualThreads > seg 19 jun 2023 16:06:22 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 16:06:35 -03
+ 1 º loop, VirtualThreads > seg 19 jun 2023 16:07:07 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 16:07:24 -03
+ 1 º loop, VirtualThreads > seg 19 jun 2023 16:12:05 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 16:12:29 -03
+ 1 º loop, VirtualThreads > seg 19 jun 2023 16:13:16 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 16:13:26 -03
+ 1 º loop, VirtualThreads > seg 19 jun 2023 16:17:03 -03
+fim 1 º loop com VirtualThreads > seg 19 jun 2023 16:17:16 -03
+ 2 º loop, VirtualThreads > seg 19 jun 2023 16:18:26 -03
+fim 2 º loop com VirtualThreads > seg 19 jun 2023 16:18:36 -03
+ 3 º loop, VirtualThreads > seg 19 jun 2023 16:19:46 -03
+fim 3 º loop com VirtualThreads > seg 19 jun 2023 16:19:56 -03
+ 1 º loop, CachedThreads > seg 19 jun 2023 16:22:58 -03
+fim 1 º loop com CachedThreads > seg 19 jun 2023 16:23:08 -03
+ 2 º loop, CachedThreads > seg 19 jun 2023 16:24:18 -03
+fim 2 º loop com CachedThreads > seg 19 jun 2023 16:24:28 -03
+ 3 º loop, CachedThreads > seg 19 jun 2023 16:25:38 -03
+fim 3 º loop com CachedThreads > seg 19 jun 2023 16:25:48 -03
+ 1 º loop, PlatformThreads > seg 19 jun 2023 16:28:17 -03
+fim 1 º loop com PlatformThreads > seg 19 jun 2023 16:28:33 -03
+ 2 º loop, PlatformThreads > seg 19 jun 2023 16:29:45 -03
+fim 2 º loop com PlatformThreads > seg 19 jun 2023 16:29:56 -03
+ 3 º loop, PlatformThreads > seg 19 jun 2023 16:31:06 -03
+fim 3 º loop com PlatformThreads > seg 19 jun 2023 16:31:22 -03
+ 1 º loop,  executor do Tomcat > seg 19 jun 2023 16:36:09 -03
+fim 1 º loop com  executor do Tomcat > seg 19 jun 2023 16:36:41 -03
+ 2 º loop,  executor do Tomcat > seg 19 jun 2023 16:37:51 -03
+fim 2 º loop com  executor do Tomcat > seg 19 jun 2023 16:38:24 -03
+ 3 º loop,  executor do Tomcat > seg 19 jun 2023 16:39:34 -03
+fim 3 º loop com  executor do Tomcat > seg 19 jun 2023 16:40:07 -03
