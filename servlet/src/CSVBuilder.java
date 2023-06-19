@@ -27,17 +27,9 @@ public class CSVBuilder {
         logPrinter.println("Request URI, Número a verificar, Primo?, ThreadInfo, Execução atrasada?");
     }
 
-    static public void writeCSV(String logMessage, boolean delayedExecution) {
+    static public void writeCSV(String logMessage) {
         lock.lock();
-            if (delayedExecution) {
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            logPrinter.println(logMessage + ", " + delayedExecution);
+            logPrinter.println(logMessage);
         lock.unlock();
     }
 

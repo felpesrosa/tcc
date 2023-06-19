@@ -55,7 +55,7 @@
     <!--The connectors can use a shared executor, you can define one or more named thread pools-->
     
     <Executor name="tomcatThreadPool" namePrefix="catalina-execc-"
-        maxThreads="150" minSpareThreads="4"/>
+     minSpareThreads="4"/>
 
     <!-- A "Connector" represents an endpoint by which requests are received
          and responses are returned. Documentation at :
@@ -72,8 +72,7 @@
     <Connector executor="tomcatThreadPool"
                port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443" /
-               maxThreads="">
+               redirectPort="8443">
 
     <!-- Define an SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
          This connector uses the NIO implementation. The default

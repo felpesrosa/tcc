@@ -74,7 +74,6 @@
     <Connector executor="platformThreadExecutor" port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                maxConnections="-1"
-               maxThreads="100000"
                redirectPort="8443" />
     <!-- A "Connector" using the shared thread pool-->
     <!--
