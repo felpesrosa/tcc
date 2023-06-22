@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class IntegerGenerator {
     public static void main(String[] args) {
-        List<Integer> generatedIntegers = generateIntegers(10000, 100_000, 1_000_000);
+        List<Integer> generatedIntegers = generateIntegers(10000, 1_000_000, 99_999_999);
         for (int num : generatedIntegers) {
             System.out.println("@" + num + "#");
         }

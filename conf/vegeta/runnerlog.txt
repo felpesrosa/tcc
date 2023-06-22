@@ -36,3 +36,60 @@ fim 1 º loop com  executor do Tomcat > seg 19 jun 2023 16:36:41 -03
 fim 2 º loop com  executor do Tomcat > seg 19 jun 2023 16:38:24 -03
  3 º loop,  executor do Tomcat > seg 19 jun 2023 16:39:34 -03
 fim 3 º loop com  executor do Tomcat > seg 19 jun 2023 16:40:07 -03
+ 1 º loop, VirtualThreads > qui 22 jun 2023 08:11:22 -03
+ 1 º loop, VirtualThreads > qui 22 jun 2023 08:56:07 -03
+fim 1 º loop com VirtualThreads > qui 22 jun 2023 08:56:17 -03
+ 2 º loop, VirtualThreads > qui 22 jun 2023 08:57:47 -03
+fim 2 º loop com VirtualThreads > qui 22 jun 2023 08:57:58 -03
+ 3 º loop, VirtualThreads > qui 22 jun 2023 08:59:28 -03
+fim 3 º loop com VirtualThreads > qui 22 jun 2023 08:59:38 -03
+ 4 º loop, VirtualThreads > qui 22 jun 2023 09:01:08 -03
+fim 4 º loop com VirtualThreads > qui 22 jun 2023 09:01:18 -03
+ 5 º loop, VirtualThreads > qui 22 jun 2023 09:02:48 -03
+fim 5 º loop com VirtualThreads > qui 22 jun 2023 09:02:58 -03
+ 6 º loop, VirtualThreads > qui 22 jun 2023 09:04:28 -03
+fim 6 º loop com VirtualThreads > qui 22 jun 2023 09:04:38 -03
+ 7 º loop, VirtualThreads > qui 22 jun 2023 09:06:08 -03
+fim 7 º loop com VirtualThreads > qui 22 jun 2023 09:06:18 -03
+ 1 º loop, CachedThreads > qui 22 jun 2023 09:10:37 -03
+fim 1 º loop com CachedThreads > qui 22 jun 2023 09:10:47 -03
+ 2 º loop, CachedThreads > qui 22 jun 2023 09:12:17 -03
+fim 2 º loop com CachedThreads > qui 22 jun 2023 09:12:27 -03
+ 3 º loop, CachedThreads > qui 22 jun 2023 09:13:57 -03
+fim 3 º loop com CachedThreads > qui 22 jun 2023 09:14:07 -03
+ 4 º loop, CachedThreads > qui 22 jun 2023 09:15:37 -03
+fim 4 º loop com CachedThreads > qui 22 jun 2023 09:15:48 -03
+ 5 º loop, CachedThreads > qui 22 jun 2023 09:17:18 -03
+fim 5 º loop com CachedThreads > qui 22 jun 2023 09:17:28 -03
+ 6 º loop, CachedThreads > qui 22 jun 2023 09:18:58 -03
+fim 6 º loop com CachedThreads > qui 22 jun 2023 09:19:08 -03
+ 7 º loop, CachedThreads > qui 22 jun 2023 09:20:38 -03
+fim 7 º loop com CachedThreads > qui 22 jun 2023 09:20:48 -03
+ 1 º loop, PlatformThreads > qui 22 jun 2023 09:27:26 -03
+fim 1 º loop com PlatformThreads > qui 22 jun 2023 09:27:36 -03
+ 2 º loop, PlatformThreads > qui 22 jun 2023 09:29:06 -03
+fim 2 º loop com PlatformThreads > qui 22 jun 2023 09:29:16 -03
+ 3 º loop, PlatformThreads > qui 22 jun 2023 09:30:46 -03
+fim 3 º loop com PlatformThreads > qui 22 jun 2023 09:30:56 -03
+ 4 º loop, PlatformThreads > qui 22 jun 2023 09:32:26 -03
+fim 4 º loop com PlatformThreads > qui 22 jun 2023 09:32:36 -03
+ 5 º loop, PlatformThreads > qui 22 jun 2023 09:34:06 -03
+fim 5 º loop com PlatformThreads > qui 22 jun 2023 09:34:17 -03
+ 6 º loop, PlatformThreads > qui 22 jun 2023 09:35:47 -03
+fim 6 º loop com PlatformThreads > qui 22 jun 2023 09:35:57 -03
+ 7 º loop, PlatformThreads > qui 22 jun 2023 09:37:27 -03
+fim 7 º loop com PlatformThreads > qui 22 jun 2023 09:37:37 -03
+ 1 º loop,  executor do Tomcat > qui 22 jun 2023 09:43:39 -03
+fim 1 º loop com  executor do Tomcat > qui 22 jun 2023 09:44:12 -03
+ 2 º loop,  executor do Tomcat > qui 22 jun 2023 09:45:42 -03
+fim 2 º loop com  executor do Tomcat > qui 22 jun 2023 09:46:15 -03
+ 3 º loop,  executor do Tomcat > qui 22 jun 2023 09:47:45 -03
+fim 3 º loop com  executor do Tomcat > qui 22 jun 2023 09:48:18 -03
+ 4 º loop,  executor do Tomcat > qui 22 jun 2023 09:49:48 -03
+fim 4 º loop com  executor do Tomcat > qui 22 jun 2023 09:50:21 -03
+ 5 º loop,  executor do Tomcat > qui 22 jun 2023 09:51:51 -03
+fim 5 º loop com  executor do Tomcat > qui 22 jun 2023 09:52:23 -03
+ 6 º loop,  executor do Tomcat > qui 22 jun 2023 09:53:54 -03
+fim 6 º loop com  executor do Tomcat > qui 22 jun 2023 09:54:26 -03
+ 7 º loop,  executor do Tomcat > qui 22 jun 2023 09:55:56 -03
+fim 7 º loop com  executor do Tomcat > qui 22 jun 2023 09:56:29 -03

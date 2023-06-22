@@ -9,11 +9,13 @@ read -p "com VirtualThreads, começar? "
     echo "subindo o servidor Tomcat"
     sudo systemctl start tomcat
 
+    sleep 5s
+
     read -p "VisualVM com Monitor Sampler ativado?"
 
     sleep 3s
 
-    for iCT1 in $(seq 1 3)
+    for iCT1 in $(seq 1 7)
     do
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
 
@@ -47,7 +49,7 @@ sudo systemctl stop tomcat
 
     sleep 3s
 
-    for iCT2 in $(seq 1 3)
+    for iCT2 in $(seq 1 7)
     do
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
 
@@ -81,7 +83,7 @@ sudo systemctl stop tomcat
 
     sleep 3s
 
-    for iCT3 in $(seq 1 3)
+    for iCT3 in $(seq 1 7)
     do
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
 
@@ -107,7 +109,7 @@ sudo systemctl stop tomcat
 
 # quarto Caso de Teste > executor original do Tomcat
     echo "colocando o server.xml original do Tomcat"
-    sudo cp ~/univille/tcc/conf/tomcat/xmlconf/server.orignal.xml /opt/tomcat/conf/server.xml
+    sudo cp ~/univille/tcc/conf/tomcat/xmlconf/server.original.xml /opt/tomcat/conf/server.xml
 
     echo "subindo o servidor Tomcat"
     sudo systemctl start tomcat
@@ -116,7 +118,7 @@ sudo systemctl stop tomcat
 
     sleep 3s
 
-    for iCT4 in $(seq 1 3)
+    for iCT4 in $(seq 1 7)
     do
         curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
 
