@@ -26,5 +26,3 @@ Repositório para controlar as versões do PTCC
 
 - mudar permissão dos .sh para conseguir executar
     chmod 751 _test-runner-v1.sh _test-runner-v2.sh _test-runner-v3.sh _test-runner-v4.sh
-
-- 
