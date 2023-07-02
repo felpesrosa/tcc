@@ -9,7 +9,7 @@
 - VisualVM: <https://visualvm.github.io/>
 
 ### Organização do repositório:
-- os testes foram executados a partir do script [/conf](./conf/vegeta/_test-runner.sh)
+- os testes foram executados a partir do script [/conf/vegeta/_test-runner.sh](./conf/vegeta/_test-runner.sh)
 - nele, a ferramenta de disparo de requisições executa a cada segundo as 5000 primeiras linhas do arquivo [/conf/vegeta/targets](./conf/vegeta/targets/1_Targers_with_delay.txt)
 - a cada execução, a ferramenta vegeta gera um relatório que fica salvo em [/conf/vegeta/results](./conf/vegeta/results/)
 - para cada tipo de thread, um arquivo server.xml é utilizado no Tomcat, referenciando o criador de thread correspondente [/conf/tomcat/xmlconf/](./conf/tomcat/xmlconf/) 
@@ -20,7 +20,7 @@
 
         
 ### Compilar a Servlet
-        cd ~/Downloads/11.06.2023/servlet/
+        cd /servlet/
         javac -d web/WEB-INF/classes/ -cp /opt/tomcat/lib/\* src/*.java
         jar cvf Servlet.war -C web .
         sudo cp Servlet.war /opt/tomcat/webapps/
