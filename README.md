@@ -17,6 +17,8 @@
 - a servlet que é executada fica em [/servlet](./servlet/)
 - os códigos Python que geraram os gráficos ficam em [/graficos](./graficos/)
 - no final de cada execução, os dados exportados da VisualVM ficaram em [/visualvmresults](./visualvmresults/) e para gerar os dados do TCC foram criados uns arquivos intermediários que contém apenas as requisições válidas, como o [_latencia-5-ultimas-execucoes.csv](./visualvmresults/_latencia-5-ultimas-execucoes.csv)
+- no [/articles](./articles/) ficaram alguns dos artigos utilizados, como o [Comparison of Structured Concurrency Constructs in Java and Kotlin Virtual Threads and Coroutines](./articles/Comparison_of_Structured_Concurrency_Constructs_in_Java_and_Kotlin__Virtual_Threads_and_Coroutines.pdf) e a versão do PTCC entregue ano passado
+- uma versão pdf da entrega do tcc está no mesmo diretório
 
         
 ### Compilar a Servlet
@@ -41,13 +43,13 @@
         
 
         // testar um número primo sem delay
-        curl http://localhost:8080/Servlet/primeNumber?numberToCheck=6696983
+        curl http://localhost:8080/Servlet/primeNumber?numberToCheck=6696983&delayedExecution=false
         
 
         // testar um número primo com delay
-        curl http://localhost:8080/Servlet/primeNumber?numberToCheck=6696983&delayedExecution=true
+        curl http://localhost:8080/Servlet/primeNumber?numberToCheck=129287&delayedExecution=true&delayDuration=100
         
 
         // fechar o arquivo .CSV
-        curl http://localhost:8080/Servlet/primeNumber?openCSVFile=true
+        curl http://localhost:8080/Servlet/primeNumber?closeCSVFile=true
         
