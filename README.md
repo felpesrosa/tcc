@@ -1,15 +1,22 @@
-## TCC comandos
+## TCC, anotações
 
 ### Links
-- instalação do Java com <https://sdkman.io/usage> versão 
+- Instalar JDK com <https://sdkman.io/usage> na versão 21
         sdk install java
         
-- versão do Tomcat utilizada: <https://tomcat.apache.org/download-11.cgi>
-- ferramenta de testes de carga: <https://github.com/tsenart/vegeta>
+- Instalar o Tomcat na versão 11: <https://tomcat.apache.org/download-11.cgi>
+- Ferramenta de disparo de requisições: <https://github.com/tsenart/vegeta>
 - VisualVM: <https://visualvm.github.io/>
 
 ### Organização do repositório:
-- em [/conf](./conf/) 
+- os testes foram executados a partir do script [/conf](./conf/vegeta/_test-runner.sh)
+- nele, a ferramenta de disparo de requisições executa a cada segundo as 5000 primeiras linhas do arquivo [/conf/vegeta/targets](./conf/vegeta/targets/1_Targers_with_delay.txt)
+- a cada execução, a ferramenta vegeta gera um relatório que fica salvo em [/conf/vegeta/results](./conf/vegeta/results/)
+- para cada tipo de thread, um arquivo server.xml é utilizado no Tomcat, referenciando o criador de thread correspondente [/conf/tomcat/xmlconf/](./conf/tomcat/xmlconf/) 
+- as classes geradoras de thread, utilizadas pelo Tomcat estão no [/conf/tomcat/jars](./conf/tomcat/jars/)
+- a servlet que é executada fica em [/servlet](./servlet/)
+- os códigos Python que geraram os gráficos ficam em [/graficos](./graficos/)
+- no final de cada execução, os dados exportados da VisualVM ficaram em [/visualvmresults](./visualvmresults/) e para gerar os dados do TCC foram criados uns arquivos intermediários que contém apenas as requisições válidas, como o [_latencia-5-ultimas-execucoes.csv](./visualvmresults/_latencia-5-ultimas-execucoes.csv)
 
         
 ### Compilar a Servlet

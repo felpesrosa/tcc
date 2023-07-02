@@ -1,26 +1,3 @@
-# import numpy as np
-# import matplotlib.pyplot as plt
-
-# # creating the dataset
-# data = {'Virtual':20,
-#         'Cached':15,
-#         'Tomcat':30}
-# courses = list(data.keys())
-# values = list(data.values())
-  
-# # fig = plt.figure(figsize = (10, 5))
- 
-# # creating the bar plot
-# # plt.bar(courses, values, color ='maroon',
-# #         width = 0.4)
-
-# plt.bar(courses, values,width = 0.4)
- 
-# plt.xlabel("Tipo de Thread")
-# plt.ylabel("Latência em Milisegundos")
-# plt.title("Média de Latência")
-# plt.show()
-
 import matplotlib.pyplot as grafico
 import csv
   
@@ -67,14 +44,3 @@ grafico.xlabel("Execução")
 grafico.title('Pico de uso de threads por execução')
 
 grafico.show()
-
-# Display the values of each point
-# for i in range(len(xvt)):
-#     if i % 2 != 0:
-#         ax.text(xvt[i], yvt[i], str(yvt[i]), ha='center', va='top')
-# for i in range(len(xct)):
-#     if i % 2 == 0:
-#         ax.text(xct[i], yct[i], str(yct[i]), ha='center', va='top')
-# for i in range(len(xtomcat)):    
-#     if i % 2 != 0:
-#         ax.text(xtomcat[i], ytomcat[i], str(ytomcat[i]), ha='center', va='top')

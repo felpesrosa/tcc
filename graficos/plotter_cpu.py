@@ -42,14 +42,3 @@ grafico.xlabel("Segundos")
 grafico.title('Percentual de Uso da CPU')
 
 grafico.show()
-
-# Display the values of each point
-# for i in range(len(xvt)):
-#     if i % 2 != 0:
-#         ax.text(xvt[i], yvt[i], str(yvt[i]), ha='center', va='top')
-# for i in range(len(xct)):
-#     if i % 2 == 0:
-#         ax.text(xct[i], yct[i], str(yct[i]), ha='center', va='top')
-# for i in range(len(xtomcat)):    
-#     if i % 2 != 0:
-#         ax.text(xtomcat[i], ytomcat[i], str(ytomcat[i]), ha='center', va='top')
